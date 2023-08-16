@@ -5,10 +5,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CSS is amazing</title>
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/slides.css" />
+  <link rel="stylesheet" href="./css/counting-with-checked.css" />
+  <link rel="stylesheet" href="./css/animate-transitions.css" />
 </head>
 
 <body>
-  <h1>Hello</h1>
+  <section id="slide-title">
+    <h2>Daredevil CSS</h2>
+    <a href="#slide-hobbies" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-hobbies">
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Singing</li>
+      <li>Dancing</li>
+      <li>CSS</li>
+    </ul>
+    <a href="#slide-title" class="previous-slide"></a>
+    <a href="#slide-how-it-started" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-how-it-started">
+    <h2>How it started</h2>
+    <a href="#slide-hobbies" class="previous-slide"></a>
+    <a href="#slide-how-it-is-going" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-how-it-is-going">
+    <h2>How it is going</h2>
+
+    <a href="#slide-" class="previous-slide"></a>
+    <a href="#slide-the-basics" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-the-basics">
+    <h2>The Basics</h2>
+
+    <a href="#slide-how-it-is-going" class="previous-slide"></a>
+    <a href="#slide-the-checked-pseudoclass" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-the-checked-pseudoclass">
+    <h2>The <code>:checked</code> Pseudoclass</h2>
+
+    <a href="#slide-the-basics" class="previous-slide"></a>
+    <a href="#slide-counting-with-checked" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-counting-with-checked">
+    <h2>Counting with <code>:checked</code></h2>
+
+    <form>
+      <input type="radio" name="counting-with-checked" checked>
+      <input type="radio" name="counting-with-checked">
+      <input type="radio" name="counting-with-checked">
+      <input type="radio" name="counting-with-checked">
+
+      <div class="target">Hello</div>
+    </form>
+
+    <a href="#slide-the-checked-pseudoclass" class="previous-slide"></a>
+    <a href="#slide-animate-transitions" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-animate-transitions">
+    <h2>Animate Transitions</h2>
+
+    <form>
+      <input type="radio" name="counting-with-checked" checked>
+      <input type="radio" name="counting-with-checked">
+      <input type="radio" name="counting-with-checked">
+      <input type="radio" name="counting-with-checked">
+
+      <div class="target animated">Hello</div>
+    </form>
+
+    <a href="#slide-counting-with-checked" class="previous-slide"></a>
+    <a href="#slide" class="next-slide"></a>
+  </section>
+
+
+
+
+
+
+  <a href="#slide-title">[start]</a>
+
 </body>
 
 </html>

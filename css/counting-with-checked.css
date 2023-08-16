@@ -1,0 +1,21 @@
+#slide-counting-with-checked .target {
+    background-color: lightblue;
+    display: block;
+    width: 50%;
+}
+
+input[name=counting-with-checked]:nth-of-type(1):checked ~ .target{
+    margin-top: 1em;
+}
+
+input[name=counting-with-checked]:nth-of-type(2):checked ~ .target{
+    margin-top: 2em;
+}
+
+input[name=counting-with-checked]:nth-of-type(3):checked ~ .target{
+    margin-top: 3em;
+}
+
+input[name=counting-with-checked]:nth-of-type(4):checked ~ .target{
+    margin-top: 4em;
+}

@@ -1,0 +1,9 @@
+#slide-animate-transitions .target {
+    background-color: lightblue;
+    display: block;
+    width: 50%;
+}
+
+#slide-animate-transitions .animated {
+    transition: all 1s ease-out;
+}

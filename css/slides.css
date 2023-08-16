@@ -1,0 +1,51 @@
+section {
+    display: none;
+    border: 1px solid black;
+    width: 100%;
+    height: 100vh;
+    padding: 10vh;
+}
+
+section:target {
+    display: block;
+}
+
+a.next-slide,
+a.previous-slide {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    text-decoration: none;
+    width: 2em;
+    height: 100%;
+    display: block;
+}
+
+a.next-slide:hover,
+a.previous-slide:hover {
+    background-color: lightblue;
+}
+
+a.next-slide {
+    right: 0;
+}
+
+a.next-slide::before,
+a.previous-slide::before {
+    width: 2em;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - var(--font-size));
+}
+
+a.next-slide:hover::before {
+    content: "»";
+}
+
+a.previous-slide {
+    left: 0;
+}
+
+a.previous-slide:hover::before {
+    content: "«";
+}
