@@ -1,19 +1,28 @@
-.binary-tree-maze {
-    margin-top: var(--font-size);
+#slide-binary-tree-maze-generator{
     --maze-cell-size: calc(var(--font-size) * 2.5);
     --hinge-indicator-size: calc(var(--maze-cell-size) * 0.7);
-    --hinge-indicator-color: #FFD0BD;
+    --hinge-indicator-color: #fde9e1;
+    --wall-thickness: 10px;
+    --random-rotation: 10deg;
+}
+
+.binary-tree-maze {
+    margin-top: var(--font-size);
     display: grid;
     grid-template-columns: repeat(5, var(--maze-cell-size));
+    border: var(--wall-thickness) solid black;
+    width: calc(5 * var(--maze-cell-size) + var(--wall-thickness) * 0.5 - 1px)
 }
 
 .maze-cell {
+    position: relative;
     background-color: white;
     border: 2px solid gray;
     margin-bottom: -2px;
     box-sizing: content-box;
     width: var(--maze-cell-size);
     height: var(--maze-cell-size);
+    overflow: visible;
 }
 
 .maze-cell.hinge-nw {
@@ -30,4 +39,202 @@
 
 .maze-cell.hinge-se {
     background-image: radial-gradient(circle at var(--maze-cell-size) var(--maze-cell-size), var(--hinge-indicator-color) var(--hinge-indicator-size), transparent 0);
+}
+
+.maze-cell::before {
+    content: " ";
+    display: block;
+    background-color: black;
+    width: var(--maze-cell-size);
+    height: var(--wall-thickness);
+    position: absolute;
+    right: 0;
+    z-index: 20;
+    transition: all 0.5s ease-out;
+}
+
+.maze-cell:nth-of-type(10) ~ .maze-cell::before
+{
+    display: none;
+}
+
+.maze-cell:nth-of-type(15) ~ .maze-cell::before
+ {
+    display: block;
+}
+
+.maze-cell ~ .maze-cell:nth-of-type(5n + 3)::before{
+    display: none;
+}
+
+.maze-cell.hinge-se::before {
+    top: calc(var(--maze-cell-size) - 0.5 * var(--wall-thickness));
+    transform-origin: right;
+    rotate: calc(var(--random-rotation) * 90deg);
+}
+
+.maze-cell.hinge-sw::before {
+    top: calc(var(--maze-cell-size) - 0.5 * var(--wall-thickness));
+    transform-origin: left;
+    rotate: calc(-90deg + var(--random-rotation) * 90deg);
+}
+
+.maze-cell.hinge-ne::before {
+    top: calc(-0.5 * var(--wall-thickness));
+    transform-origin: right;
+    rotate: calc(var(--random-rotation) * -90deg)
+}
+
+.maze-cell.hinge-nw::before {
+    top: calc(-0.5 * var(--wall-thickness));
+    transform-origin: left;
+    rotate: calc(90deg - var(--random-rotation) * 90deg)
+}
+
+input:nth-of-type(1):checked ~ .binary-tree-maze {
+    --random-2-1: 0;
+    --random-2-2: 1;
+    --random-2-3: 1;
+    --random-2-4: 0;
+    --random-2-5: 0;
+    --random-2-6: 1;
+    --random-2-7: 1;
+    --random-2-8: 1;
+    --random-2-9: 0;
+
+    --random-3-1: 1;
+    --random-3-2: 1;
+    --random-3-3: 2;
+    --random-3-4: 2;
+    --random-3-5: 1;
+    --random-3-6: 0;
+
+    --random-4: 1;
+}
+
+input:nth-of-type(2):checked ~ .binary-tree-maze {
+    --random-2-1: 0;
+    --random-2-2: 0;
+    --random-2-3: 1;
+    --random-2-4: 1;
+    --random-2-5: 0;
+    --random-2-6: 1;
+    --random-2-7: 0;
+    --random-2-8: 0;
+    --random-2-9: 0;
+
+    --random-3-1: 0;
+    --random-3-2: 2;
+    --random-3-3: 2;
+    --random-3-4: 0;
+    --random-3-5: 1;
+    --random-3-6: 2;
+
+    --random-4: 3;
+}
+
+input:nth-of-type(3):checked ~ .binary-tree-maze {
+    --random-2-1: 0;
+    --random-2-2: 0;
+    --random-2-3: 1;
+    --random-2-4: 0;
+    --random-2-5: 1;
+    --random-2-6: 0;
+    --random-2-7: 0;
+    --random-2-8: 0;
+    --random-2-9: 1;
+
+    --random-3-1: 1;
+    --random-3-2: 0;
+    --random-3-3: 1;
+    --random-3-4: 2;
+    --random-3-5: 0;
+    --random-3-6: 0;
+
+    --random-4: 2;
+}
+
+input:nth-of-type(4):checked ~ .binary-tree-maze {
+    --random-2-1: 1;
+    --random-2-2: 0;
+    --random-2-3: 0;
+    --random-2-4: 1;
+    --random-2-5: 0;
+    --random-2-6: 1;
+    --random-2-7: 0;
+    --random-2-8: 1;
+    --random-2-9: 1;
+
+    --random-3-1: 2;
+    --random-3-2: 2;
+    --random-3-3: 2;
+    --random-3-4: 0;
+    --random-3-5: 1;
+    --random-3-6: 1;
+
+    --random-4: 0;
+}
+
+.maze-cell:nth-of-type(1) {
+    --random-rotation: var(--random-2-1);
+}
+
+.maze-cell:nth-of-type(2) {
+    --random-rotation: var(--random-3-1);
+}
+
+.maze-cell:nth-of-type(4) {
+    --random-rotation: var(--random-2-2);
+}
+
+.maze-cell:nth-of-type(5) {
+    --random-rotation: var(--random-2-3);
+}
+
+.maze-cell:nth-of-type(6) {
+    --random-rotation: calc(var(--random-3-2) - 1);
+}
+
+.maze-cell:nth-of-type(7) {
+    --random-rotation: var(--random-4);
+}
+
+.maze-cell:nth-of-type(9) {
+    --random-rotation: var(--random-3-3);
+}
+
+.maze-cell:nth-of-type(10) {
+    --random-rotation: var(--random-3-4);
+}
+
+.maze-cell:nth-of-type(16) {
+    --random-rotation: var(--random-2-4);
+}
+
+.maze-cell:nth-of-type(17) {
+    --random-rotation: var(--random-3-5);
+}
+
+.maze-cell:nth-of-type(19) {
+    --random-rotation: var(--random-2-5);
+}
+
+.maze-cell:nth-of-type(20) {
+    --random-rotation: var(--random-2-6);
+}
+
+.maze-cell:nth-of-type(21) {
+    --random-rotation: var(--random-2-7);
+}
+
+.maze-cell:nth-of-type(22) {
+    --random-rotation: var(--random-3-6);
+}
+
+.maze-cell:nth-of-type(24) {
+    --random-rotation: var(--random-2-8);
+}
+
+.maze-cell:nth-of-type(25) {
+    --random-rotation: var(--random-2-9);
 }
