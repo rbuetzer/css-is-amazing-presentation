@@ -8,8 +8,11 @@
   <link rel="stylesheet" href="./css/normalize.css" />
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/slides.css" />
+  <link rel="stylesheet" href="./css/code-example.css" />
   <link rel="stylesheet" href="./css/counting-with-checked.css" />
   <link rel="stylesheet" href="./css/animate-transitions.css" />
+  <link rel="stylesheet" href="./css/styled-radio-buttons.css" />
+  <link rel="stylesheet" href="./css/styled-radio-buttons-addendum.css" />
 </head>
 
 <body>
@@ -72,17 +75,17 @@
     <h2>Counting with <code>:checked</code></h2>
 
     <form>
-      <input type="radio" name="counting-with-checked" checked>
-      <input type="radio" name="counting-with-checked">
-      <input type="radio" name="counting-with-checked">
-      <input type="radio" name="counting-with-checked">
+      <input type="radio" name="a" checked>
+      <input type="radio" name="a">
+      <input type="radio" name="a">
+      <input type="radio" name="a">
 
-      <code class="target">
-        .target
+      <code class="target moving-target">
+        .moving-target
       </code>
     </form>
 
-    <iframe style="--lines: 100" src="./css/counting-with-checked.css"></iframe>
+    <iframe style="--lines: 19" src="./css/counting-with-checked.css"></iframe>
 
     <a href="#slide-the-checked-pseudoclass" class="previous-slide"></a>
     <a href="#slide-animate-transitions" class="next-slide"></a>
@@ -94,17 +97,41 @@
     <h2>Animate Transitions</h2>
 
     <form>
-      <input type="radio" name="counting-with-checked" checked>
-      <input type="radio" name="counting-with-checked">
-      <input type="radio" name="counting-with-checked">
-      <input type="radio" name="counting-with-checked">
+      <input type="radio" name="a" checked>
+      <input type="radio" name="a">
+      <input type="radio" name="a">
+      <input type="radio" name="a">
 
-      <div class="target animated-target">.animated-target</div>
+      <div class="target moving-target animated-target">.animated-target</div>
     </form>
 
     <iframe style="--lines: 3" src="./css/animate-transitions.css"></iframe>
 
     <a href="#slide-counting-with-checked" class="previous-slide"></a>
+    <a href="#slide-styling-the-radio-buttons" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-styling-the-radio-buttons">
+    <h2>Styling the Radio Buttons</h2>
+
+    <form class="styled-radio-button-container">
+
+      <input type="radio" class="styled-radio-button" name="a" checked>
+      <input type="radio" class="styled-radio-button" name="a">
+      <input type="radio" class="styled-radio-button" name="a">
+      <input type="radio" class="styled-radio-button" name="a">
+
+      <div class="target moving-target animated-target">.animated-target</div>
+
+      <button class="plus">+</button>
+      <button ckass="minus">−</button>
+    </form>
+
+    <iframe src="./css/styled-radio-buttons.css"></iframe>
+
+    <a href="#slide-animate-transitions" class="previous-slide"></a>
     <a href="#slide" class="next-slide"></a>
   </section>
 

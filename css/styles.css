@@ -5,10 +5,20 @@
 
 body {
     font-size: var(--font-size);
+    overflow: hidden;
 }
 
 input {
     height: var(--font-size);
     width: var(--font-size);
     border: 0;
+}
+
+.target {
+    background-color: lightblue;
+    display: block;
+    box-sizing: border-box;
+    padding: var(--font-size);
+    width: var(--inner-width);
+    margin-top: var(--font-size);
 }

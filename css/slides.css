@@ -11,34 +11,6 @@ section:target {
     display: block;
 }
 
-
-section iframe {
-    --iframe-zoom: 3;
-    --desired-height: calc(0.5em * (var(--lines, 5) + 1));
-
-    position: fixed;
-    bottom: var(--font-size);
-    width: calc(var(--inner-width) / var(--iframe-zoom));
-    margin-top: var(--font-size) ;
-    box-sizing: border-box;
-    border: 1px solid lightgrey;
-    background-color: white;
-    height: calc(0.5em * (min(var(--lines, 5), 5) + 1));
-
-    zoom: var(--iframe-zoom);
-    -moz-transform: scale(var(--iframe-zoom));
-    -moz-transform-origin: 0 100%;
-    -o-transform: scale(var(--iframe-zoom));
-    -o-transform-origin: 0 100%;
-    -webkit-transform: scale(var(--iframe-zoom));
-    -webkit-transform-origin: 0 100%;
-    transition: height 0.5s ease-out;
-}
-
-section iframe:hover {
-    height: min(var(--desired-height), calc((100% - var(--slide-padding))/ var(--iframe-zoom)));
-}
-
 a.next-slide,
 a.previous-slide {
     position: absolute;

@@ -1,0 +1,16 @@
+.styled-radio-button {
+    position: absolute;
+    left: calc(0 * var(--distance));
+}
+
+.styled-radio-button:checked {
+    left: calc(1 * var(--distance));
+}
+
+.styled-radio-button:checked + input {
+    left: calc(2 * var(--distance));
+}
+
+.styled-radio-button:checked + input ~ input {
+    left: calc(3 * var(--distance));
+}
