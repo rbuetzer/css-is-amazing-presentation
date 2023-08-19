@@ -1,0 +1,33 @@
+.binary-tree-maze {
+    margin-top: var(--font-size);
+    --maze-cell-size: calc(var(--font-size) * 2.5);
+    --hinge-indicator-size: calc(var(--maze-cell-size) * 0.7);
+    --hinge-indicator-color: #FFD0BD;
+    display: grid;
+    grid-template-columns: repeat(5, var(--maze-cell-size));
+}
+
+.maze-cell {
+    background-color: white;
+    border: 2px solid gray;
+    margin-bottom: -2px;
+    box-sizing: content-box;
+    width: var(--maze-cell-size);
+    height: var(--maze-cell-size);
+}
+
+.maze-cell.hinge-nw {
+    background-image: radial-gradient(circle at 0 0, var(--hinge-indicator-color) var(--hinge-indicator-size), transparent 0);
+}
+
+.maze-cell.hinge-sw {
+    background-image: radial-gradient(circle at 0 var(--maze-cell-size), var(--hinge-indicator-color) var(--hinge-indicator-size), transparent 0);
+}
+
+.maze-cell.hinge-ne {
+    background-image: radial-gradient(circle at var(--maze-cell-size) 0, var(--hinge-indicator-color) var(--hinge-indicator-size), transparent 0);
+}
+
+.maze-cell.hinge-se {
+    background-image: radial-gradient(circle at var(--maze-cell-size) var(--maze-cell-size), var(--hinge-indicator-color) var(--hinge-indicator-size), transparent 0);
+}
