@@ -10,7 +10,7 @@ section iframe {
     box-sizing: border-box;
     border: 1px solid lightgrey;
     background-color: white;
-    height: calc(0.5em * (min(var(--lines, 99), 3) + 1));
+    height: calc(0.5em * (min(var(--lines, 99), var(--collapsed-size)) + 1));
 
     zoom: var(--iframe-zoom);
     -moz-transform: scale(var(--iframe-zoom));

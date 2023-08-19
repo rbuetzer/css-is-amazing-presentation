@@ -23,3 +23,7 @@ input {
     width: var(--inner-width);
     margin-top: var(--font-size);
 }
+
+.inner-target {
+    background-color: #DFFFFF;
+}

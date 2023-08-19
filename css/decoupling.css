@@ -15,7 +15,7 @@ input:nth-of-type(4):checked ~ .decoupled-target {
 }
 
 
-.my-value-consumer {
+.decoupled-target .my-value-consumer {
     background-color: hsl(calc(20deg* var(--value)) 100% 50%);
     rotate: calc(5deg * var(--value));
     text-shadow: black 0 0 calc(3px * var(--value));
