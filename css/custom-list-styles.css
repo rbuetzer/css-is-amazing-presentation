@@ -1,0 +1,9 @@
+@counter-style cardinal-direction {
+    system: fixed;
+    symbols: North East South West;
+}
+
+.output-cardinal-direction::after {
+    counter-set: value calc(var(--value) + 1);
+    content: "value: " counter(value, cardinal-direction);
+}

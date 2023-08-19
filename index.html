@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./css/counter.css" />
   <link rel="stylesheet" href="./css/decoupling.css" />
   <link rel="stylesheet" href="./css/output-custom-property-values.css" />
+  <link rel="stylesheet" href="./css/custom-list-styles.css" />
 </head>
 
 <body>
@@ -173,7 +174,10 @@
 
       <div class="target decoupled-target">
         .decoupled-target
-        <div class="target inner-target debug-consumer">.debug-consumer<br><br></div>
+        <div class="target inner-target output-value">
+          .output-value
+          <br><br>
+        </div>
 
       </div>
     </form>
@@ -181,6 +185,32 @@
     <iframe style="--lines: 4; --collapsed-size: 4" src="./css/output-custom-property-values.css"></iframe>
 
     <a href="#slide-decoupling" class="previous-slide"></a>
+    <a href="#slide-custom-list-styles" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-custom-list-styles">
+    <h2>Custom List Styles</h2>
+    <form class="counter">
+      <input type="radio" name="a" checked>
+      <input type="radio" name="a">
+      <input type="radio" name="a">
+      <input type="radio" name="a">
+
+      <div class="target decoupled-target">
+        .decoupled-target
+        <div class="target inner-target output-cardinal-direction">
+          .output-cardinal-direction
+          <br><br>
+        </div>
+
+      </div>
+    </form>
+
+    <iframe style="--lines: 10" src="./css/custom-list-styles.css"></iframe>
+
+    <a href="#slide-output-custom-property-values" class="previous-slide"></a>
     <a href="#slide" class="next-slide"></a>
   </section>
 

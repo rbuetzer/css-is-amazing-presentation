@@ -1,4 +1,4 @@
-.debug-consumer::after {
+.output-value::after {
     counter-set: value var(--value);
     content: "value: " counter(value);
 }
