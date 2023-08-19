@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="./css/animate-transitions.css" />
   <link rel="stylesheet" href="./css/styled-radio-buttons.css" />
   <link rel="stylesheet" href="./css/styled-radio-buttons-addendum.css" />
+  <link rel="stylesheet" href="./css/counter.css" />
+  <link rel="stylesheet" href="./css/decoupling.css" />
 </head>
 
 <body>
@@ -85,7 +87,7 @@
       </code>
     </form>
 
-    <iframe style="--lines: 19" src="./css/counting-with-checked.css"></iframe>
+    <iframe style="--lines: 16" src="./css/counting-with-checked.css"></iframe>
 
     <a href="#slide-the-checked-pseudoclass" class="previous-slide"></a>
     <a href="#slide-animate-transitions" class="next-slide"></a>
@@ -129,9 +131,32 @@
       <button ckass="minus">−</button>
     </form>
 
-    <iframe src="./css/styled-radio-buttons.css"></iframe>
+    <iframe style="--lines: 16" src="./css/styled-radio-buttons.css"></iframe>
 
     <a href="#slide-animate-transitions" class="previous-slide"></a>
+    <a href="#slide-decoupling" class="next-slide"></a>
+  </section>
+
+
+
+  <section id="slide-decoupling">
+    <h2>Decoupling</h2>
+    <form class="counter">
+      <input type="radio" name="a" checked>
+      <input type="radio" name="a">
+      <input type="radio" name="a">
+      <input type="radio" name="a">
+
+      <div class="target decoupled-target">
+        .decoupled-target
+        <div class="target animated-target my-value-consumer">.my-value-consumer</div>
+
+      </div>
+    </form>
+
+    <iframe src="./css/decoupling.css"></iframe>
+
+    <a href="#slide-styling-the-radio-buttons" class="previous-slide"></a>
     <a href="#slide" class="next-slide"></a>
   </section>
 

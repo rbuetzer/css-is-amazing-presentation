@@ -2,11 +2,11 @@ section iframe {
     --iframe-zoom: 3;
     --collapsed-size: 3;
     --desired-height: calc(0.5em * (var(--lines, 99) + 1));
+    --code-example-margin: var(--slide-padding-y);
 
     position: fixed;
-    bottom: var(--font-size);
+    bottom: var(--code-example-margin);
     width: calc(var(--inner-width) / var(--iframe-zoom));
-    margin-top: var(--font-size) ;
     box-sizing: border-box;
     border: 1px solid lightgrey;
     background-color: white;
@@ -25,6 +25,6 @@ section iframe {
 section iframe:hover {
     height: min(
         var(--desired-height),
-        calc((100% - var(--slide-padding))/ var(--iframe-zoom))
+        calc((var(--inner-height))/ var(--iframe-zoom))
     );
 }

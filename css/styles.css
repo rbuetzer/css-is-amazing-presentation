@@ -1,6 +1,7 @@
 :root {
     --font-size: 2em;
-    --slide-padding: 4em;
+    --slide-padding-x: 4em;
+    --slide-padding-y: 2em;
 }
 
 body {
