@@ -5,23 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CSS is amazing</title>
-  <link rel="stylesheet" href="./css/normalize.css" />
-  <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="stylesheet" href="./css/slides.css" />
-  <link rel="stylesheet" href="./css/code-example.css" />
-  <link rel="stylesheet" href="./css/counting-with-checked.css" />
-  <link rel="stylesheet" href="./css/animate-transitions.css" />
-  <link rel="stylesheet" href="./css/styled-radio-buttons.css" />
-  <link rel="stylesheet" href="./css/styled-radio-buttons-addendum.css" />
-  <link rel="stylesheet" href="./css/counter.css" />
-  <link rel="stylesheet" href="./css/decoupling.css" />
-  <link rel="stylesheet" href="./css/output-custom-property-values.css" />
-  <link rel="stylesheet" href="./css/custom-list-styles.css" />
-  <link rel="stylesheet" href="./css/binary-tree-maze.css" />
-  <link rel="stylesheet" href="./css/random-walls-counter-styles.css" />
-  <link rel="stylesheet" href="./css/random-walls.css" />
-  <link rel="stylesheet" href="./css/random-walls-addendum.css" />
-  <link rel="stylesheet" href="./css/binary-counter.css" />
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/slides.css">
+  <link rel="stylesheet" href="./css/the-checked-pseudoclass.css">
+  <link rel="stylesheet" href="./css/the-checked-pseudoclass-addendum.css">
+  <link rel="stylesheet" href="./css/code-example.css">
+  <link rel="stylesheet" href="./css/counting-with-checked.css">
+  <link rel="stylesheet" href="./css/animate-transitions.css">
+  <link rel="stylesheet" href="./css/styled-radio-buttons.css">
+  <link rel="stylesheet" href="./css/styled-radio-buttons-addendum.css">
+  <link rel="stylesheet" href="./css/decoupling.css">
+  <link rel="stylesheet" href="./css/output-custom-property-values.css">
+  <link rel="stylesheet" href="./css/custom-list-styles.css">
+  <link rel="stylesheet" href="./css/binary-tree-maze.css">
+  <link rel="stylesheet" href="./css/random-walls-counter-styles.css">
+  <link rel="stylesheet" href="./css/random-walls.css">
+  <link rel="stylesheet" href="./css/random-walls-addendum.css">
+  <link rel="stylesheet" href="./css/binary-counter.css">
 </head>
 
 <body>
@@ -47,6 +48,12 @@
 
   <section id="slide-how-it-started">
     <h2>How it started</h2>
+    <p>
+      <img src="img/tudor-1.webp">
+    </p>
+    <p><a href="https://css-tricks.com/how-i-live-coded-my-most-hearted-codepen-demo/">
+        How I Live-Coded My Most-Hearted Pen</a> by Ana Tudor
+    </p>
     <a href="#slide-hobbies" class="previous-slide"></a>
     <a href="#slide-how-it-is-going" class="next-slide"></a>
   </section>
@@ -56,16 +63,7 @@
   <section id="slide-how-it-is-going">
     <h2>How it is going</h2>
 
-    <a href="#slide-" class="previous-slide"></a>
-    <a href="#slide-the-basics" class="next-slide"></a>
-  </section>
-
-
-
-  <section id="slide-the-basics">
-    <h2>The Basics</h2>
-
-    <a href="#slide-how-it-is-going" class="previous-slide"></a>
+    <a href="#slide-how-it-started" class="previous-slide"></a>
     <a href="#slide-the-checked-pseudoclass" class="next-slide"></a>
   </section>
 
@@ -74,7 +72,17 @@
   <section id="slide-the-checked-pseudoclass">
     <h2>The <code>:checked</code> Pseudoclass</h2>
 
-    <a href="#slide-the-basics" class="previous-slide"></a>
+    <div>
+      <input type="checkbox" class="parking-space-checkbox"> I need a parking space
+
+      <div class="parking-space-note">
+        Note: No monster trucks allowed!
+      </div>
+    </div>
+
+    <iframe style="--lines: 7; --collapsed-size: 7" src="./css/the-checked-pseudoclass.css"></iframe>
+
+    <a href="#slide-how-it-is-going" class="previous-slide"></a>
     <a href="#slide-counting-with-checked" class="next-slide"></a>
   </section>
 

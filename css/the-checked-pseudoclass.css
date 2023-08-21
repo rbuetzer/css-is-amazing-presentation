@@ -1,0 +1,7 @@
+.parking-space-note {
+    display: none;
+}
+
+.parking-space-checkbox:checked ~ .parking-space-note {
+    display: block;
+}

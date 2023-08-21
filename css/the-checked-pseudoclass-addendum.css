@@ -1,0 +1,9 @@
+.parking-space-checkbox {
+    height: 1em;
+}
+
+.parking-space-note {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: lightblue;
+}
