@@ -1,0 +1,14 @@
+@counter-style possible-wall-a {
+    system: cyclic;
+    symbols:  '' '█' '█'  '' '█'  ''  '';
+}
+
+@counter-style possible-wall-b {
+    system: cyclic;
+    symbols:  ''  ''  '' '█'  ''  '' '█';
+}
+
+@counter-style possible-wall-c {
+    system: cyclic;
+    symbols: '█'  ''  ''  ''  '' '█'  '';
+}

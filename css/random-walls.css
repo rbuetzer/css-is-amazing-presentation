@@ -7,35 +7,12 @@
     counter-set: value var(--value);
 }
 
-/* Wall A */
-
-@counter-style possible-wall-a {
-    system: cyclic;
-    symbols:  '' '█' '█'  '' '█'  ''  '';
-}
-
 .possible-wall-a::before {
     content: counter(value, possible-wall-a);
 }
 
-
-/* Wall B */
-
-@counter-style possible-wall-b {
-    system: cyclic;
-    symbols:  ''  ''  '' '█'  ''  '' '█';
-}
-
 .possible-wall-b::before {
     content: counter(value, possible-wall-b);
-}
-
-
-/* Wall C */
-
-@counter-style possible-wall-c {
-    system: cyclic;
-    symbols: '█'  ''  ''  ''  '' '█'  '';
 }
 
 .possible-wall-c::before {
