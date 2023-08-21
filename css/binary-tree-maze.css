@@ -9,9 +9,10 @@
 .binary-tree-maze {
     margin-top: var(--font-size);
     display: grid;
-    grid-template-columns: repeat(5, var(--maze-cell-size));
+    position: relative;
+    grid-template-columns: repeat(var(--maze-row-count, 5), var(--maze-cell-size));
     border: var(--wall-thickness) solid black;
-    width: calc(5 * var(--maze-cell-size) + var(--wall-thickness) * 0.5 - 1px)
+    width: calc(var(--maze-row-count, 5) * var(--maze-cell-size) + var(--wall-thickness) * 0.5 - 1px)
 }
 
 .maze-cell {

@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="./css/output-custom-property-values.css" />
   <link rel="stylesheet" href="./css/custom-list-styles.css" />
   <link rel="stylesheet" href="./css/binary-tree-maze.css" />
+  <link rel="stylesheet" href="./css/random-walls.css" />
+  <link rel="stylesheet" href="./css/random-walls-addendum.css" />
+  <link rel="stylesheet" href="./css/binary-counter.css" />
 </head>
 
 <body>
@@ -293,23 +296,92 @@
     </p>
 
     <a href="#slide-binary-tree-maze-generator" class="previous-slide"></a>
-    <a href="#slide-" class="next-slide"></a>
+    <a href="#slide-random-walls" class="next-slide"></a>
   </section>
 
 
 
-  <section id="slide-random-numbers-in-css">
-    <h2>Random Numbers in CSS</h2>
+  <section id="slide-random-walls">
+    <h2>Random Maze Walls</h2>
 
-    <p>
-      <img src="./img/random-number-xkcd.png" alt="">
-      <br>
-      <a href="https://xkcd.com/221/" target="_blank">
-        https://xkcd.com/221/
-      </a>
-    </p>
+    <div class="binary-counter">
+      <input type="checkbox" class="bit">
+      <input type="checkbox" class="bit">
+      <input type="checkbox" class="bit">
+      <input type="checkbox" class="bit">
+      <input type="checkbox" class="bit">
 
-    <a href="#slide-binary-tree-maze-generator" class="previous-slide"></a>
+      <div class="binary-counter-label binary-counter-label-plus">+</div>
+      <div class="binary-counter-label binary-counter-label-minus">−</div>
+
+      <div class="binary-counter-result">
+        <table class="random-wall-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="random-wall-table-th-1">1</th>
+              <th class="random-wall-table-th-2">2</th>
+              <th class="random-wall-table-th-3">3</th>
+              <th class="random-wall-table-th-4">4</th>
+              <th class="random-wall-table-th-5">5</th>
+              <th class="random-wall-table-th-6">6</th>
+              <th class="random-wall-table-th-7">7</th>
+            </tr>
+          </thead>
+          <tr>
+            <th>random-a</th>
+            <td>""</td>
+            <td>"█"</td>
+            <td>"█"</td>
+            <td>""</td>
+            <td>"█"</td>
+            <td>""</td>
+            <td>""</td>
+          </tr>
+          <tr>
+            <th>random-b</th>
+            <td>""</td>
+            <td>""</td>
+            <td>""</td>
+            <td>"█"</td>
+            <td>""</td>
+            <td>""</td>
+            <td>"█"</td>
+          </tr>
+          <tr>
+            <th>random-c</th>
+            <td>"█"</td>
+            <td>""</td>
+            <td>""</td>
+            <td>""</td>
+            <td>""</td>
+            <td>"█"</td>
+            <td>""</td>
+          </tr>
+        </table>
+
+        <div class="debug-counter-result"></div>
+
+        <div class="binary-tree-maze possible-wall-container">
+          <div class="maze-cell hinge-se">
+            <div class="possible-wall possible-wall-a"></div>
+            <div class="possible-wall possible-wall-b"></div>
+          </div>
+          <div class="maze-cell hinge-sw">
+            <div class="possible-wall possible-wall-c"></div>
+          </div>
+
+          <div class="possible-wall-label possible-wall-label-a">A</div>
+          <div class="possible-wall-label possible-wall-label-b">B</div>
+          <div class="possible-wall-label possible-wall-label-c">C</div>
+        </div>
+      </div>
+    </div>
+
+
+    <iframe src="./css/random-walls.css"></iframe>
+
+    <a href="#slide-random-numbers-in-css" class="previous-slide"></a>
     <a href="#slide-" class="next-slide"></a>
   </section>
 

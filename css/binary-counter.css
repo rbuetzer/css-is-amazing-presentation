@@ -1,0 +1,110 @@
+  /* Default values */
+  .binary-counter  {
+    --counter-raw-bit-1: 0;
+    --counter-raw-bit-2: 0;
+    --counter-raw-bit-3: 0;
+    --counter-raw-bit-4: 0;
+    --counter-raw-bit-5: 0;
+    position: relative;
+  }
+
+  .binary-counter > .bit {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    height: var(--font-size);
+    width: var(--font-size);
+    cursor: pointer;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    clip-path: circle(50%);
+  }
+
+  .binary-counter > .bit,
+  .binary-counter > .bit:checked ~ .bit:checked,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit {
+    left: calc(2 * var(--font-size))
+  }
+
+  .binary-counter > .bit:checked,
+  .binary-counter > .bit:checked ~ .bit,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit:checked,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked,
+  .binary-counter > .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit:checked ~ .bit {
+    left: 0;
+  }
+
+  .binary-counter > .bit:nth-last-of-type(5):checked ~ .binary-counter-result {
+    --counter-raw-bit-5: 1;
+  }
+
+  .binary-counter > .bit:nth-last-of-type(4):checked ~ .binary-counter-result {
+    --counter-raw-bit-4: 1;
+  }
+
+  .binary-counter > .bit:nth-last-of-type(3):checked ~ .binary-counter-result {
+    --counter-raw-bit-3: 1;
+  }
+
+  .binary-counter > .bit:nth-last-of-type(2):checked ~ .binary-counter-result {
+    --counter-raw-bit-2: 1;
+  }
+
+  .binary-counter > .bit:nth-last-of-type(1):checked ~ .binary-counter-result {
+    --counter-raw-bit-1: 1;
+  }
+
+  .binary-counter > .binary-counter-result {
+    --counter-bit-5: var(--counter-raw-bit-5);
+    --counter-bit-4: calc((var(--counter-raw-bit-4) - var(--counter-bit-5)) * (var(--counter-raw-bit-4) - var(--counter-bit-5)));
+    --counter-bit-3: calc((var(--counter-raw-bit-3) - var(--counter-bit-4)) * (var(--counter-raw-bit-3) - var(--counter-bit-4)));
+    --counter-bit-2: calc((var(--counter-raw-bit-2) - var(--counter-bit-3)) * (var(--counter-raw-bit-2) - var(--counter-bit-3)));
+    --counter-bit-1: calc((var(--counter-raw-bit-1) - var(--counter-bit-2)) * (var(--counter-raw-bit-1) - var(--counter-bit-2)));
+
+    --value: calc(1 + var(--counter-bit-1) + 2 * var(--counter-bit-2) + 4 * var(--counter-bit-3) + 8 * var(--counter-bit-4) + 16 * var(--counter-bit-5));
+  }
+
+  .binary-counter-label {
+    background-color: lightblue;
+    height: var(--font-size);
+    width: var(--font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .binary-counter-label-plus {
+    left: calc(2 * var(--font-size))
+  }
+
+  .binary-counter-label-minus {
+    left: 0
+  }
+
+
+.debug-counter-result::before {
+    counter-set: counter-result var(--value);
+    content: counter(counter-result);
+    height: var(--font-size);
+    width: var(--font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    left: var(--font-size);
+    top: 0;
+    pointer-events: none;
+    z-index: 10;
+}

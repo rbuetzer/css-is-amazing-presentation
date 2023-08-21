@@ -1,0 +1,134 @@
+#slide-random-walls {
+    --maze-cell-size: calc(var(--font-size) * 4);
+    --hinge-indicator-size: calc(var(--maze-cell-size) * 0.7);
+    --hinge-indicator-color: #fde9e1;
+    --wall-thickness: 10px;
+    --random-rotation: 10deg;
+    --maze-row-count: 2;
+}
+
+.possible-wall-container {
+    margin-top: calc(2 * var(--font-size));
+    margin-left: calc(2 * var(--font-size));
+}
+
+.possible-wall-container .maze-cell {
+    border: none;
+}
+
+.possible-wall-container .maze-cell.hinge-se::before,
+.possible-wall-container .maze-cell.hinge-sw::before {
+    display: none;
+}
+
+.possible-wall {
+    border: 2px dashed gray;
+    height: calc(var(--wall-thickness) * 3);
+    width: var(--maze-cell-size);
+    position: absolute;
+    z-index: 10;
+}
+
+
+.possible-wall::before {
+    height: calc(var(--wall-thickness) * 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.possible-wall-label {
+    background-color: orange;
+    height: var(--font-size);
+    width: var(--font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.possible-wall-label-a {
+    left: calc(-1.3 * var(--font-size));
+    top: calc(var(--maze-cell-size) - 0.5 * var(--font-size) - 1.5 * var(--wall-thickness));
+}
+
+.possible-wall-label-b {
+    left: calc(var(--maze-cell-size) - 0.5 * var(--font-size) + var(--wall-thickness));
+    top: calc(-1.3 * var(--font-size));
+}
+
+.possible-wall-label-c {
+    left: calc(2 * var(--maze-cell-size) + 0.3 * var(--font-size));
+    top: calc(var(--maze-cell-size) - 0.5 * var(--font-size) - 1.5 * var(--wall-thickness));
+}
+
+.possible-wall-a {
+    bottom: 0;
+    right: 0;
+}
+
+.possible-wall-b {
+    transform-origin: right;
+    rotate: 90deg;
+    bottom: calc(-1.5 * var(--wall-thickness));
+    left: 0;
+}
+
+.possible-wall-c {
+    bottom: 0;
+    left: 0;
+}
+
+.binary-counter-result {
+    position: relative;
+    padding-top: calc(1.5 * var(--font-size));
+}
+
+.random-wall-table {
+    font-family: monospace;
+}
+
+.random-wall-table thead th {
+    height:  calc(1.2 * var(--font-size));
+}
+
+.random-wall-table td {
+    padding: 0 1em;
+    text-align: center;
+}
+
+@counter-style one-in-seven {
+    system: cyclic;
+    symbols:  '⭐' '' '' '' '' '' '';
+}
+
+.random-wall-table-th-1::after {
+    counter-set: value calc(var(--value));
+    content: counter(value, one-in-seven);
+}
+.random-wall-table-th-2::after {
+    counter-set: value calc(var(--value) - 1);
+    content: counter(value, one-in-seven);
+}
+.random-wall-table-th-3::after {
+    counter-set: value calc(var(--value) - 2);
+    content: counter(value, one-in-seven);
+}
+.random-wall-table-th-4::after {
+    counter-set: value calc(var(--value) - 3);
+    content: counter(value, one-in-seven);
+}
+.random-wall-table-th-5::after {
+    counter-set: value calc(var(--value) - 4);
+    content: counter(value, one-in-seven);
+}
+.random-wall-table-th-6::after {
+    counter-set: value calc(var(--value) - 5);
+    content: counter(value, one-in-seven);
+}
+.random-wall-table-th-7::after {
+    counter-set: value calc(var(--value) - 6);
+    content: counter(value, one-in-seven);
+}
