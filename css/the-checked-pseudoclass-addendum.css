@@ -5,5 +5,7 @@
 .parking-space-note {
     margin-top: 1em;
     padding: 1em;
+    box-sizing: border-box;
     background-color: lightblue;
+    width: var(--inner-width);
 }

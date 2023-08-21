@@ -2,6 +2,8 @@
     --font-size: 2em;
     --slide-padding-x: 4em;
     --slide-padding-y: 2em;
+    --inner-width: calc(100% - 2 * var(--slide-padding-x));
+    --inner-height: calc(100vh - 2 * var(--slide-padding-y));
 }
 
 body {

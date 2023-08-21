@@ -4,8 +4,6 @@ section {
     width: 100%;
     height: 100vh;
     padding: var(--slide-padding-y) var(--slide-padding-x);
-    --inner-width: calc(100% - 2 * var(--slide-padding-x));
-    --inner-height: calc(100% - 2 * var(--slide-padding-y));
 }
 
 section:target {
