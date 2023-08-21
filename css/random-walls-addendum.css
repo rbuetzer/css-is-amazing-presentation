@@ -99,6 +99,11 @@
     text-align: center;
 }
 
+.random-wall-table th:first-of-type {
+    padding: 0 1em;
+    text-align: right;
+}
+
 @counter-style one-in-seven {
     system: cyclic;
     symbols:  '⭐' '' '' '' '' '' '';
