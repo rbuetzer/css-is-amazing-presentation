@@ -20,7 +20,6 @@
     z-index: 10;
     left: 0;
     top: 0;
-    clip-path: circle(50%);
   }
 
   .binary-counter > .bit,
@@ -78,7 +77,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     position: absolute;
     pointer-events: none;
     z-index: 10;
