@@ -49,3 +49,8 @@ a.previous-slide {
 a.previous-slide:hover::before {
     content: "«";
 }
+
+img {
+    max-height: calc(var(--inner-height) * 0.6);
+    max-width: var(--inner-width);
+}

@@ -1,5 +1,5 @@
 #slide-random-walls {
-    --maze-cell-size: calc(var(--font-size) * 4);
+    --maze-cell-size: calc(var(--font-size) * 2.5);
     --hinge-indicator-size: calc(var(--maze-cell-size) * 0.7);
     --hinge-indicator-color: #fde9e1;
     --wall-thickness: 10px;

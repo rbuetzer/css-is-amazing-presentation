@@ -1,5 +1,5 @@
 #slide-binary-tree-maze-generator{
-    --maze-cell-size: calc(var(--font-size) * 2.5);
+    --maze-cell-size: calc(var(--font-size) * 2);
     --hinge-indicator-size: calc(var(--maze-cell-size) * 0.7);
     --hinge-indicator-color: #fde9e1;
     --wall-thickness: 10px;
