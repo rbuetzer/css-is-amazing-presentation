@@ -1,0 +1,27 @@
+.daredevil-box {
+    position: relative;
+    border: 3px solid black;
+    height: calc(var(--inner-height) * 0.7);
+    width: calc(var(--inner-height) * 0.7);
+    background-color: transparent;
+    margin-left: 100px;
+}
+
+.daredevil-cannon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.daredevil-catcher {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.daredevil-stuntman {
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    z-index: -1;
+}
