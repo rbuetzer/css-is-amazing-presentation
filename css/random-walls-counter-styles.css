@@ -1,14 +1,14 @@
-@counter-style possible-wall-a {
-    system: cyclic;
-    symbols:  '' '█' '█'  '' '█'  ''  '';
+@counter-style random-a {
+  system: cyclic;
+  symbols: "" "█" "█" "" "█" "" "";
 }
 
-@counter-style possible-wall-b {
-    system: cyclic;
-    symbols:  ''  ''  '' '█'  ''  '' '█';
+@counter-style random-b {
+  system: cyclic;
+  symbols: "" "" "" "█" "" "" "█";
 }
 
-@counter-style possible-wall-c {
-    system: cyclic;
-    symbols: '█'  ''  ''  ''  '' '█'  '';
+@counter-style random-c {
+  system: cyclic;
+  symbols: "█" "" "" "" "" "█" "";
 }

@@ -1,0 +1,23 @@
+.loop-images {
+  display: flex;
+  gap: 2em;
+}
+
+.hover-loop-container {
+  position: relative;
+}
+
+.hover-loop {
+  background-color: lightblue;
+  width: 281px;
+  height: 281px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.hover-loop:hover {
+  height: 30px;
+}

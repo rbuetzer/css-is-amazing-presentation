@@ -1,20 +1,20 @@
 .possible-wall {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .possible-wall::before {
-    font-size: 100vw;
-    counter-set: value var(--value);
+  font-size: 100vw;
+  counter-set: value var(--value);
 }
 
 .possible-wall-a::before {
-    content: counter(value, possible-wall-a);
+  content: counter(value, random-a);
 }
 
 .possible-wall-b::before {
-    content: counter(value, possible-wall-b);
+  content: counter(value, random-b);
 }
 
 .possible-wall-c::before {
-    content: counter(value, possible-wall-c);
+  content: counter(value, random-c);
 }

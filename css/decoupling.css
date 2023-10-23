@@ -1,22 +1,21 @@
 input:nth-of-type(1):checked ~ .decoupled-target {
-    --value: 0;
+  --value: 0;
 }
 
 input:nth-of-type(2):checked ~ .decoupled-target {
-    --value: 1;
+  --value: 1;
 }
 
 input:nth-of-type(3):checked ~ .decoupled-target {
-    --value: 2;
+  --value: 2;
 }
 
 input:nth-of-type(4):checked ~ .decoupled-target {
-    --value: 3;
+  --value: 3;
 }
 
-
 .decoupled-target .my-value-consumer {
-    background-color: hsl(calc(20deg* var(--value)) 100% 50%);
-    rotate: calc(5deg * var(--value));
-    text-shadow: black 0 0 calc(3px * var(--value));
+  background-color: hsl(calc(20deg * var(--value)) 100% 50%);
+  rotate: calc(5deg * var(--value));
+  text-shadow: black 0 0 calc(3px * var(--value));
 }

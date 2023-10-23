@@ -1,23 +1,19 @@
 .wall-of-text {
-    background:
-        linear-gradient(to bottom, #fff 20%, transparent 20%) repeat border-box,
-        conic-gradient(from 0deg at 10% 50%, transparent 75%, #fff 70%) repeat border-box,
-        conic-gradient(from 0deg at 10% 50%, transparent 75%, #fff 70%) repeat border-box,
-        linear-gradient(var(--wall-color), var(--wall-color)) repeat border-box;
+  background: linear-gradient(to bottom, #fff 20%, transparent 20%) repeat
+      border-box,
+    conic-gradient(from 0deg at 10% 50%, transparent 75%, #fff 70%) repeat
+      border-box,
+    conic-gradient(from 0deg at 10% 50%, transparent 75%, #fff 70%) repeat
+      border-box,
+    linear-gradient(var(--wall-color), var(--wall-color)) repeat border-box;
 
-    background-size:
-        var(--brick-width) var(--brick-height),
-        var(--brick-width) var(--brick-width),
-        var(--brick-width) var(--brick-width),
-        var(--brick-width) var(--brick-width);
+  background-size: var(--brick-width) var(--brick-height),
+    var(--brick-width) var(--brick-width), var(--brick-width) var(--brick-width),
+    var(--brick-width) var(--brick-width);
 
-    background-position:
-            0 0,
-            0 0,
-            var(--brick-height) var(--brick-height),
-            0 0;
+  background-position: 0 0, 0 0, var(--brick-height) var(--brick-height), 0 0;
 
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
