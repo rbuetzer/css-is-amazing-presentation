@@ -1,4 +1,4 @@
 .output-value::after {
-    counter-set: value var(--value);
-    content: "value: " counter(value);
+  counter-set: my-counter var(--value);
+  content: "value: " counter(my-counter);
 }
